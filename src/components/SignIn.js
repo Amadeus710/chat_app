@@ -64,19 +64,22 @@ export default function SignIn({ setName }) {
             required
             fullWidth
             id='name'
-            label='nick name'
+            label='nickname'
             name='name'
             autoFocus
             onChange={(e) => setString(e.target.value)}
           />
 
           <Button
-            type='submit'
+            type='button'
             fullWidth
             variant='contained'
             color='primary'
             className={classes.submit}
-            disabled={disabled}>
+            disabled={disabled}
+            onClick={() => {
+              setName(string);
+            }}>
             チャット開始
           </Button>
         </form>
