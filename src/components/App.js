@@ -12,6 +12,6 @@ export default () => {
   if (config.SignInEnabled && name === "") {
     return <SignIn setName={setName} />;
   } else {
-    return <Main nem={name} />;
+    return <Main name={name} />;
   }
 };
